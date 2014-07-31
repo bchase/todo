@@ -11,8 +11,8 @@ gem 'haml-rails'
 # gem 'haml_coffee_assets', '~> 1.16.0', github: 'netzpirat/haml_coffee_assets'
 # gem 'rails-backbone'
 
+gem 'sqlite3'
 gem 'unicorn'
-gem 'pg'
 
 gem 'pry-rails'
 
@@ -57,6 +57,7 @@ group :development, :test do
 end
 
 group :production do
+  gem 'pg'
   gem 'rails_12factor'
 end
 # gem 'newrelic_rpm'
