@@ -1,10 +1,7 @@
-= simple_form_for(@todo) do |f|
-  = f.error_notification
-
-  .form-inputs
-    = f.input :name
-    = f.input :complete
-    = f.association :user
-
+= simple_form_for @todo, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :name
+  -# = f.input :complete
+  -# = f.input :user_id
   .form-actions
-    = f.button :submit
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), todos_path, :class => 'btn'
