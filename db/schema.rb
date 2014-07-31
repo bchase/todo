@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140731093725) do
 
   create_table "todos", force: true do |t|
     t.string   "name"
-    t.boolean  "complete"
+    t.boolean  "complete",   default: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
