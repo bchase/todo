@@ -17,7 +17,11 @@
       %tr
         -# %td= link_to todo.id, todo_path(todo)
         %td= todo.name
-        %td= todo.complete
+        %td
+          - if todo.complete
+            = fa_icon 'check-square-o'
+          - else
+            = fa_icon 'square-o'
         -# %td= todo.user_id
         %td=l todo.created_at
         %td
